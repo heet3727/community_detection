@@ -17,7 +17,7 @@ Used movieLens dataset with 671 users and their ratings. Each user represents a 
 
 ### Configurations:
 scala v2.10 <br />
-spark-1.6.2 <br />
+spark v1.6.2 <br />
 graphX library to manipulate graph
 
 ### Output:
