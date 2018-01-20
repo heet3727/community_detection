@@ -12,13 +12,18 @@ Output folder has two files. Heet_Sheth_betweenness.txt has betweenness values a
 3.	Run step 2 until we get the highest modularity
 
 ## Analysis of data used:
-The network has 671 nodes with 154331 edges. This tells that the given graph is densely connected. After running community detection algorithm, we got 23 communities according to GN algorithm. We see one giant community with almost all the nodes and the rest are just a couple of nodes or single nodes in the community. 
+Used movieLens dataset with 671 users and their ratings. Each user represents a user. If the count of the commonly rated movie between any two users is greater than 3, (hyper-param) an edge is considered. There are total 154331 such edges present in the network. This tells that the given graph is densely connected. 
+
+### Configurations:
+scala v2.10
+spark-1.6.2
+graphX library to manipulate graph
 
 ### Output:
 To calculate betweenness, it takes around 90 seconds to run for the used dataset. 
 To detect communities, it takes total 160 seconds. 
 
 ## Conclusion: 
-The GN algorithm removes new users from the network rather than making proper community. GN is not the best algorithm to detect communities.
+We get 23 communities according to GN algorithm. We see one giant community with almost all the nodes and the rest are just a couple of nodes or single nodes in the community. The GN algorithm removes new users from the network rather than making proper community. GN is not the best algorithm to detect communities.
 
 
